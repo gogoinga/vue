@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue-test</title>
+	<script type="text/javascript" src="js/vue.js"></script>
+</head>
+
+<body> 
+
+<div id="demo">{{ fullname }}</div>
+ 	
+</body>
+<script type="text/javascript">
+	var vm=new Vue({
+	 	 el: '#demo',
+		data: {
+	    firstname: 'Foo',
+	    lastname: 'Bar',
+	    fullname: 'Foo Bar'
+  },
+  	watch: {
+	    firstname: function (val) {
+	      this.fullname = val + ' ' + this.lastname
+	      alert(val)
+	    	},
+	    lastname: function (val) {
+	      this.fullname = this.firstname + ' ' + val
+	    }
+	  }
+})
+	function dog(b){
+		b=1;
+	}
+	var a={c:1};
+	
+	console.log(a)
+
+	dog(a);
+	
+	
+</script>
+
+</html>
